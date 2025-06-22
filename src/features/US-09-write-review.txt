@@ -1,0 +1,12 @@
+Feature: Write Review for Field (US-09)
+   Description: As a user, I want to write a review for a field after playing to share my experience.
+
+   Pseudocode:
+   Function writeReview(bookingId, rating, comment):
+       if hasPlayed(bookingId):
+           saveReview(bookingId, rating, comment)
+           notifyUser("Review submitted successfully")
+           return true
+       else:
+           notifyUser("Cannot review: You have not played at this field")
+           return false
