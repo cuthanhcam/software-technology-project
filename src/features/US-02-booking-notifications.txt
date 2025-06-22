@@ -1,0 +1,12 @@
+Feature: Booking Status Notifications (US-02)
+   Description: As a user, I want to receive notifications about booking status (success or unavailable).
+
+   Pseudocode:
+   Function sendBookingNotification(bookingId):
+       bookingStatus = checkBookingStatus(bookingId)
+       if bookingStatus == "success":
+           notifyUser("Booking confirmed for " + booking.time + " at " + booking.field)
+       else if bookingStatus == "unavailable":
+           notifyUser("Booking unavailable. Please choose another time or field.")
+       else:
+           notifyUser("Error checking booking status")
