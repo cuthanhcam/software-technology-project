@@ -1,0 +1,10 @@
+Feature: Update Profile Information (US-04)
+   Description: As a user, I want to update my profile information (name, phone number).
+
+   Pseudocode:
+   Function updateProfile(userId, newName, newPhone):
+       if validateInput(newName, newPhone):
+           updateProfileData(userId, newName, newPhone)
+           notifyUser("Profile updated successfully")
+       else:
+           notifyUser("Invalid input. Please check name and phone number.")
