@@ -1,0 +1,12 @@
+Feature: Edit Review (US-10)
+   Description: As a user, I want to edit my review if I change my opinion.
+
+   Pseudocode:
+   Function editReview(reviewId, newRating, newComment):
+       if ownsReview(reviewId):
+           updateReview(reviewId, newRating, newComment)
+           notifyUser("Review updated successfully")
+           return true
+       else:
+           notifyUser("Cannot edit: You do not own this review")
+           return false
