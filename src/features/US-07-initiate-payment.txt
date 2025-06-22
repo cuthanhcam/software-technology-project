@@ -1,0 +1,18 @@
+Feature: Initiate Payment for Booking (US-07)
+   Description: As a user, I want to initiate payment to complete a field booking.
+
+   Pseudocode:
+   Function initiatePayment(bookingId):
+       booking = fetchBookingDetails(bookingId)
+       if booking is not null:
+           payment = createPayment(booking.cost, booking.userId)
+           if processPayment(payment):
+               confirmBooking(bookingId)
+               notifyUser("Payment successful")
+               return true
+           else:
+               notifyUser("Payment failed")
+               return false
+       else:
+           notifyUser("Booking not found")
+           return false
