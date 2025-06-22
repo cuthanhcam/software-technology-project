@@ -1,0 +1,12 @@
+Feature: Request Refund for Cancellation (US-08)
+   Description: As a user, I want to request a refund if I cancel a booking within policy.
+
+   Pseudocode:
+   Function requestRefund(bookingId):
+       if isEligibleForRefund(bookingId):
+           processRefund(bookingId)
+           notifyUser("Refund request approved")
+           return true
+       else:
+           notifyUser("Refund request denied: Outside cancellation policy")
+           return false
