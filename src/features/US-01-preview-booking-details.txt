@@ -1,0 +1,17 @@
+Feature: Preview Booking Details (US-01)
+   Description: As a user, I want to preview booking details (time, field, cost) to confirm before payment.
+
+   Pseudocode:
+   Function previewBooking(bookingId):
+       booking = fetchBookingDetails(bookingId)
+       if booking is not null:
+           displayBookingDetails(booking.time, booking.field, booking.cost)
+           if userConfirms():
+               proceedToPayment(bookingId)
+               return true
+           else:
+               cancelBookingPreview()
+               return false
+       else:
+           notifyUser("Booking not found")
+           return false
