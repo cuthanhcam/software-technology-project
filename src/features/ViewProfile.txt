@@ -1,0 +1,10 @@
+ Feature: View Profile Information (US-03)
+   Description: As a user, I want to view my profile information to verify its accuracy.
+
+   Pseudocode:
+   Function viewProfile(userId):
+       profile = fetchProfile(userId)
+       if profile is not null:
+           displayProfile(profile.name, profile.phone, profile.email)
+       else:
+           notifyUser("Profile not found")
