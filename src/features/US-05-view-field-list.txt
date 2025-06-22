@@ -1,0 +1,11 @@
+Feature: View List of Sports Fields (US-05)
+   Description: As a user, I want to view the list of sports fields to find one that suits my needs.
+
+   Pseudocode:
+   Function viewFieldList():
+       fields = fetchAllFields()
+       if fields is not empty:
+           for each field in fields:
+               displayFieldSummary(field.name, field.location, field.type)
+       else:
+           notifyUser("No fields available")
