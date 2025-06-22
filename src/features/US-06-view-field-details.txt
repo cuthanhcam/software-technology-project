@@ -1,0 +1,14 @@
+Feature: View Field Details (US-06)
+   Description: As a user, I want to view field details (price, amenities, description).
+
+   Pseudocode:
+   Function viewFieldDetails(fieldId):
+       field = fetchFieldDetails(fieldId)
+       if field is not null:
+           displayFieldDetails(field.name, field.price, field.amenities, field.description)
+       else:
+           notifyUser("Field not found")
+Beta
+0 / 10
+used queries
+1
